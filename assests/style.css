@@ -23,3 +23,10 @@
     font-size: 25px;
     color: aliceblue;
 }
+
+.movieContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
