@@ -1,3 +1,6 @@
+body {
+    background-color: #2C2F31;
+}
 .brand-container h1 {
     font-size: 20px;
     display: flex;
