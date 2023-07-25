@@ -27,6 +27,7 @@ function displayMovieInfo(movie) {
         <p><strong>Duration:</strong> ${movie.Runtime}</p>
         <p><strong>Actors:</strong> ${movie.Actors}</p>
         <p><strong>IMDb Rating:</strong> ${movie.imdbRating}</p>
+        <img src="${movie.Poster}" alt="${movie.Title} Poster" class="movie-poster">
     `;
 }
 
@@ -34,4 +35,3 @@ function displayErrorMessage(message) {
     const movieInfo = document.getElementById('movieInfo');
     movieInfo.innerHTML = `<p class="error">${message}</p>`;
 }
-
