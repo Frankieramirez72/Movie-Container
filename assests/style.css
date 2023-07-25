@@ -2,17 +2,12 @@
     color: lightskyblue;
     background-color: #2c2f31;
 }
+
 .brand-container h1 {
-    font-size: 20px;
+    font-size: 35px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-
-/* Example CSS for movie poster styling */
-.movie-poster {
-    width: 200px; /* Adjust the size as needed */
-    height: auto; /* Maintain aspect ratio */
 }
 
 #currentDay {
@@ -24,9 +19,29 @@
     color: aliceblue;
 }
 
+/* Example CSS for movie poster styling */
+.movie-poster {
+    width: 200px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
 .movieContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+#movieInfo h2{
+    background-color: #0284c7;
+}
+#movieInfo p{
+    background-color: #0284c7;
+}
+#movieInfo strong{
+    text-decoration: underline;
+    background-color: #0284c7;
+}
+#movieInfo img{
     justify-content: center;
 }
