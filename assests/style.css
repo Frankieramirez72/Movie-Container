@@ -1,4 +1,7 @@
-
+*{
+    color: lightskyblue;
+    background-color: #2c2f31;
+}
 .brand-container h1 {
     font-size: 20px;
     display: flex;
