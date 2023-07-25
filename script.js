@@ -34,3 +34,4 @@ function displayErrorMessage(message) {
     const movieInfo = document.getElementById('movieInfo');
     movieInfo.innerHTML = `<p class="error">${message}</p>`;
 }
+
