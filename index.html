@@ -10,7 +10,7 @@
 
 <!-- Logo Section -->
 <div class="brand-container">
-    <h1 class="brand-name">Movie Container</h4>
+    <h1 class="brand-name pt-8 pb-2">Movie Container</h1>
 </div>
 
 <!-- Start of Page Content -->
@@ -18,11 +18,13 @@
     <div class="main-container">
         <!-- Header -->
         <div class="header">
-            <div class="top-container">
+            <div class="top-container space-y-2">
                 <!-- Welcome Screen! -->
-                <div class="welcome-container">
-                    <h2 class="welcome-title"> 🍿 Welcome!</h1>
-                    <span class="welcome-subtitle">Don't know what movie to watch? Start you movie search here! Just type in any movie name and we'll provide you with the correct info, so you can make your correct choice!</span>
+                <div class="welcome-container flex flex-row justify-center">
+                    <h2 class="welcome-title"> 🍿 Welcome!</h2>
+                </div>
+                <div class="welcome-container flex flex-row justify-center">
+                    <h2 class="welcome-subtitle">Don't know what movie to watch? Start you movie search here! Just type in any movie name and we'll provide you with the correct info, so you can make your correct choice!</h2>
                 </div>
 
 <!-- Begin of NavBar -->
@@ -51,9 +53,9 @@
 </nav>
 
 <!-- Search Bar -->
-<div class="container">
-    <h1>Movie Search</h1>
-    <input type="text" id="searchInput" class="rounded-l shadow-sm bg-white shadow-black px-1" placeholder="Enter a movie title">
+<div class="container inline justify-center">
+    <h3 class="flex justify-center">Movie Search</h3>
+    <input type="text" class="rounded-l shadow-sm bg-white shadow-black px-1" id="searchInput"  placeholder="Enter a movie title">
     <button class="rounded-r bg-teal-500 shadow-md shadow-teal-800 px-1" id="searchButton"> Search </button>
     <div id="movieInfo"></div>
 </div>
