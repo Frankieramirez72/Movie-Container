@@ -2,19 +2,19 @@
 
 ## User Story
 
-As a **movie enthusiast**
+As A **movie enthusiast**
 
-I want to look up movie ratings
+I WANT to **look up movie ratings**
 
-So that I don’t watch a movie that I don’t find interesting
+So THAT I **don’t watch a movie that I don’t find interesting**
 
 ## Acceptance Criteria
 
-GIVEN a movie search dashboard with a genre of categories, movie ratings, and descriptions
+GIVEN a **movie search dashboard with a genre of categories, movie ratings, and descriptions**
 
-WHEN I search for a movie
+WHEN I **search for a movie**
 
-THEN I see the actors, the genre, director, writer, duration, languages, ratings, and a poster of that movie
+THEN I **see the actors, the genre, director, writer, duration, languages, ratings, and a poster of that movie**
 
 ## Description
 
