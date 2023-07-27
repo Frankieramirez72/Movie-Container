@@ -26,6 +26,8 @@ N/A
 
 ## Usage
 
-To use this web page, open link in browser and enter movie desired in search box and hit enter. The movie information should appear on screen. 
+To use this web page, open link in browser and enter movie desired in search box and hit enter. The movie information should appear on screen.
 
 ## Website Link
+
+[https://frankieramirez72.github.io/Movie-Container/](https://frankieramirez72.github.io/Movie-Container/)
