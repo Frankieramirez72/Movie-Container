@@ -9,8 +9,9 @@
 </head>
 
 <!-- Logo Section -->
-<div class="brand-container">
-    <h1 class="brand-name">Movie Container</h4>
+<div class="brand-container mt-8">
+    <h1 class="brand-name">Movie Container</h1>
+    <p id="currentDay" class="lead"></p>
 </div>
 
 <!-- Start of Page Content -->
@@ -18,11 +19,15 @@
     <div class="main-container">
         <!-- Header -->
         <div class="header">
-            <div class="top-container">
+            <div class="top-container space-y-2">
                 <!-- Welcome Screen! -->
-                <div class="welcome-container">
-                    <h2 class="welcome-title"> 🍿 Welcome!</h1>
-                    <span class="welcome-subtitle">Don't know what movie to watch? Start you movie search here! Just type in any movie name and we'll provide you with the correct info, so you can make your correct choice!</span>
+                <div class="welcome-container flex flex-row justify-center text-[23px]">
+                    <h2 class="welcome-title text-center"> 🍿 Welcome!</h2>
+                </div>
+                <div class="welcome-container flex flex-row text-[16px] justify-center">
+                    <p class="welcome-subtitle text-center box-decoration-clone bg-gradient-to-t from-sky-600 to-cyan-500 box-border w-[4000px] p-4 border-4 ">
+                        Don't know what movie to watch? Start you movie search here! Just type in any movie name and we'll provide you with the correct info, so you can make your correct choice!
+                    </p>
                 </div>
 
 <!-- Begin of NavBar -->
@@ -35,13 +40,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <span class="icon"><i class="fa-solid fa-house"></i></span>
-                        <span class="item">Home</span>
+                
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">
                         <span class="icon"><i class="fa-solid fa-heart"></i></span>
-                        <span class="item">Watch Later</span>
+                        
                     </a>
                 </li>
             </ul>
@@ -51,12 +56,18 @@
 </nav>
 
 <!-- Search Bar -->
-<div class="container">
-    <h1>Movie Search</h1>
-    <input type="text" id="searchInput" class="rounded-l shadow-sm bg-white shadow-black px-1" placeholder="Enter a movie title">
-    <button class="rounded-r bg-teal-500 shadow-md shadow-teal-800 px-1" id="searchButton"> Search </button>
-    <div id="movieInfo"></div>
+<div class="container inline justify-center">
+    <h3 class="flex justify-center">Movie Search</h3>
+    <div class="movieContainer pb-3">
+        <input type="text" class="rounded-l-lg bg-white shadow-md shadow-slate-900 px-3 text-blue-900" id="searchInput"  placeholder="Enter a movie title">
+        <button class="rounded-r bg-slate-700 shadow-md shadow-slate-900 px-2" id="searchButton"> Search </button>
+    </div>
+    <div class="grid flex justify-center text-left box-decoration-clone bg-sky-600 box-border h-[560px] p-4 border-4" id="movieInfo"></div>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 
 </html>
