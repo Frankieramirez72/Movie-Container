@@ -2,6 +2,7 @@ document.getElementById('searchButton').addEventListener('click', searchMovie);
 
 // Get the input field
 var input = document.getElementById("searchInput");
+var movieInfo = document.getElementById('movieInfo');
 
 // Execute a function when the user presses a key on the keyboard
 input.addEventListener("keypress", function(event) {
@@ -14,29 +15,33 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
-async function searchMovie() {
+document.getElementById('searchButton').addEventListener('click', function() {
+    searchMovie();
+    saveLastSearchedMovie(input.value.trim());
+});
+
+function searchMovie() {
     const apiKey = '10d8dccd';
-    const searchTerm = document.getElementById('searchInput').value.trim();
+    const searchTerm = input.value.trim();
     const apiUrl = `https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`;
 
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        if (data.Response === 'True') {
-            displayMovieInfo(data);
-        } else {
-            displayErrorMessage(data.Error);
-        }
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        displayErrorMessage('An error occurred while fetching data.');
-    }
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.Response === 'True') {
+                displayMovieInfo(data);
+            } else {
+                displayErrorMessage(data.Error);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            displayErrorMessage('An error occurred while fetching data.');
+        });
 }
 
 function displayMovieInfo(movie) {
-    const movieInfo = document.getElementById('movieInfo');
     movieInfo.innerHTML = `
-        
         <h2><strong>Title:</strong> ${movie.Title}</h2>
         <p><strong>Year:</strong> ${movie.Year}</p>
         <p><strong>Duration:</strong> ${movie.Runtime}</p>
@@ -47,31 +52,18 @@ function displayMovieInfo(movie) {
 }
 
 function displayErrorMessage(message) {
-    const movieInfo = document.getElementById('movieInfo');
     movieInfo.innerHTML = `<p class="error">${message}</p>`;
 }
 
-$(function(){
-    var currentDayEl = $('#currentDay');
+// Function to save the last searched movie to local storage
+function saveLastSearchedMovie(movieTitle) {
+    localStorage.setItem('lastSearchedMovie', movieTitle);
+}
 
-    function displayDate(){
-        var dateToday = dayjs().format('MMM DD, YYYY');
-        currentDayEl.text(dateToday);
-    }
-    displayDate()
-    function determineTimeNow() {
-        var time = dayjs().hour()
-        var hour = $(this).attr("id").slice(5)
-        var hour = $(this).attr("id").slice(5)
-        if (hour < currentTime) {
-          $(this).addClass("past").removeClass("present future")
-        }
-        else if (hour == currentTime) {
-          $(this).addClass("present").removeClass("past future")
-        }
-        else {
-          $(this).addClass("future").removeClass("present past")
-        }
-    }
-})
+// Function to retrieve the last searched movie from local storage
+function getLastSearchedMovie() {
+    return localStorage.getItem('lastSearchedMovie') || '';
+}
 
+// Display the last searched movie on page load (if available in local storage)
+input.value = getLastSearchedMovie();
