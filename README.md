@@ -14,7 +14,7 @@ GIVEN a **movie search dashboard with a genre of categories, movie ratings, and 
 
 WHEN I **search for a movie**
 
-THEN I **see the actors, the genre, director, writer, duration, languages, ratings, and a poster of that movie**
+THEN I **see the actors, the genre, the director, the writer, duration, languages, ratings, and a poster of that movie**
 
 ## Description
 
@@ -26,7 +26,8 @@ N/A
 
 ## Usage
 
-To use this web page, open link in browser and enter movie desired in search box and hit enter. The movie information should appear on screen.
+To use this web page, open the link in the browser and enter the movie desired in the search box, and hit enter. The movie information should appear on the screen.
+![alt text](/assets/images/movieContainer.png)
 
 ## Website Link
 
